@@ -7,7 +7,7 @@ The goal of this project is to develop an image denoising algorithm utilizing de
 
 Libraries used: Numpy, matplotlib, tensorflow, keras
 
-#Project Overview:
+# Project Overview:
 
 In this project, we utilized a convolutional neural network (CNN) architecture, widely favored in image processing tasks for its proficiency in capturing spatial hierarchies within images. Our CNN model comprises several convolutional layers, each succeeded by activation and pooling layers, which collectively facilitate the extraction and consolidation of image features.
 Convolutional Layers: These layers extract distinctive features from the input images.
@@ -17,17 +17,17 @@ Upsampling Layers: These layers are utilized to restore the original spatial dim
 
 We partitioned the data into training and testing sets, allocating 80% for training and 20% for testing. Subsequently, we created train_ds and test_ds datasets for our custom-built model, utilizing a batch size of 32 during training.
 
-#Basic Components of the model
+# Basic Components of the model
 
 The model consists of 5 convolutional layers, 2 max pooling layers, and 2 sampling layers, which are essential components of the architecture.
 This setup is designed to remove noise from low-quality noisy images, converting them into higher quality images that closely resemble the
 original clean, noise-free versions.
 
-#Results and Findings:
+# Results and Findings:
 
 We evaluated the loss using both the binary cross-entropy and mean squared error (MSE) functions while adjusting the number of epochs and batch size. The binary cross-entropy consistently outperformed MSE, achieving lower loss values. Specifically, optimal results were obtained with 100 epochs, a batch size of 32, and an 80:20 train-to-test ratio.
 
-#PSNR Calculations
+# PSNR Calculations
 
 Binary cross-entropy computes the loss between the clean and denoised images. Peak Signal-to-Noise Ratio (PSNR) is subsequently derived from this loss. PSNR serves as a metric to gauge the fidelity of the denoised image compared to the original clean image. Higher PSNR values signify superior image quality with reduced noise in the denoised output.
 
